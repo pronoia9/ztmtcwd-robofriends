@@ -14,8 +14,7 @@ class App extends Component {
   }
 
   onSearch = (e) => {
-    // this.state.searchKey.setState(e.target.value)
-    console.log(`key: ${this.state.searchKey}  |  input: ${e.target.value}`);
+    this.setState({ ...(this.state.searchKey = e.target.value) });
   };
 
   render() {
