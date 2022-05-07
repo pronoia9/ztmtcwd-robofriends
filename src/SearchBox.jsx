@@ -1,7 +1,7 @@
 import React from 'react';
 
 const onSearch = (e) => {
-  console.log(e.target.value);
+  const key = this.state.searchKey;
 };
 
 const SearchBox = ({ searchKey }) => {
