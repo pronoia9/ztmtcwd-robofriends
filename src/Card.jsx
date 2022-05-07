@@ -7,7 +7,8 @@ const Card = ({ id, name = 'Name', username = 'Username', email = 'example@mail.
       <div className='card'>
         <img src={`https://robohash.org/${id}?200x200`} alt={`${username}_photo`} />
         <div>
-          <h2 className='name'>{name}</h2>
+          <p className='name'>{name}</p>
+          <p className='username'>{`@${username}`}</p>
           <p className='email'>{email}</p>
         </div>
       </div>
