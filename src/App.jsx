@@ -4,17 +4,19 @@ import CardList from './CardList';
 // data
 import robots from './robots.json';
 
-const state = {
-  robots: robots,
-  searchKey: '',
-};
-
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      robots: robots,
+      searchKey: '',
+    };
+  }
   render() {
     return (
       <div className='app-container'>
-        <SearchBox searchKey={state.searchKey} />
-        {state.robots.length > 0 ? <CardList robots={state.robots} searchKey={state.searchKey} /> : <></>}
+        <SearchBox searchKey={this.state.searchKey} />
+        {this.state.robots.length > 0 ? <CardList robots={this.state.robots} searchKey={this.state.searchKey} /> : <></>}
       </div>
     );
   }
