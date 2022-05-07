@@ -4,10 +4,6 @@ import CardList from './CardList';
 // data
 import robots from './robots.json';
 
-const onSearch = (e) => {
-  // this.state.searchKey = e.target.value;
-  console.log(`${this.state.searchKey}   |   ${e.target.value}`);
-};
 class App extends Component {
   constructor() {
     super();
@@ -16,10 +12,13 @@ class App extends Component {
       searchKey: '',
     };
   }
+
+  onSearch = (e) => { this.state.searchKey = e.target.value; };
+
   render() {
     return (
       <div className='app-container'>
-        <SearchBox onSearch={onSearch} />
+        <SearchBox onSearch={this.onSearch} />
         <CardList robots={this.state.robots} searchKey={this.state.searchKey} />
       </div>
     );
