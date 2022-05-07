@@ -4,7 +4,7 @@ import './css/SearchBox.css';
 const SearchBox = ({ onSearch }) => {
   return (
     <div className='searchbox-container pa2 tc'>
-      <input className='' type='search' placeholder='search robots' onChange={onSearch} />
+      <input className='search-box' type='search' placeholder='search robots' onChange={onSearch} />
     </div>
   );
 };
