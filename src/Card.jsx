@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = (props) => {
   return (
-    <div className='bg-light-green dib bd3 pa3 ma2 grow bw2 shadow-5'>
+    <div className='tc bg-light-green dib bd3 pa3 ma2 grow bw2 shadow-5'>
       <img src={`https://robohash.org/${props.id}?200x200`} alt={`photo${props.id}`} />
       <div>
         <h2>{props.name}</h2>
