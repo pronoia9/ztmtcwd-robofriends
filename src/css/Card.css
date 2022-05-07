@@ -1,13 +1,26 @@
 .card {
   width: 100%;
-    margin: 0 auto;
-    display: block;
-    line-height: 1.4;
-    letter-spacing: 0.2px;
-    border: 1px solid rgba(255, 255, 255, 0.44);
-    background-color: rgba(189,189,189,0.1);
-    padding: 15px 8px 15px 17px;
-    border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  background-color: rgba(189, 189, 189, 0.1);
+  padding: 15px 8px 15px 17px;
+  border-radius: 5px;
 }
 
-
+.email {
+  color: #2fffad;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+.email:hover {
+  color: #00c9b7;
+}
