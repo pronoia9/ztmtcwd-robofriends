@@ -1,0 +1,17 @@
+.search-box,
+.search-box::placeholder {
+  color: #dddddd;
+  letter-spacing: 0.094em;
+  text-align: center;
+  background-color: #845ec2;
+  height: 8.7vh;
+  width: 50vh;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+  outline : none;
+}
+
+.search-box::placeholder {
+  color: #ddddddc4;
+}
