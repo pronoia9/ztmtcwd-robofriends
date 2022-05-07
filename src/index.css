@@ -1,15 +1,3 @@
-
-.cards-container,header {
-	box-sizing: border-box;
-}
-.cards-container {
-	background-color: #222831;
-	padding: 20px;
-	border-radius: 10px;
-	color: #6b6b6b;
-	margin: 40px 0;
-}
-
 *::selection {
   background: #00c9b7;
   padding: 10px;
@@ -24,7 +12,6 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: #fff;
   font-size: 0.875em;
   letter-spacing: 0.063em;
 }
