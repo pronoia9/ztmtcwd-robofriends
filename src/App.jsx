@@ -2,18 +2,19 @@ import React, { Component } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
 // data
-import robots from './robots.json';
+import robotsData from './robots.json';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      robots: robots,
-      searchKey: '',
+      robots: robotsData,
+      searchKey: 'a',
     };
   }
 
   onSearch = (e) => {
+    // this.state.searchKey.setState(e.target.value)
     console.log(`key: ${this.state.searchKey}  |  input: ${e.target.value}`);
   };
 
