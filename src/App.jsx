@@ -11,8 +11,8 @@ const state = {
 const App = ({ robots }) => {
   return (
     <div className='app-container'>
-      <SearchBox />
-      {state.robots.length > 0 ? <CardList robots={state.robots} /> : <></>}
+      <SearchBox searchKey={state.searchKey} />
+      {state.robots.length > 0 ? <CardList robots={state.robots} searchKey={state.searchKey} /> : <></>}
     </div>
   );
 };
