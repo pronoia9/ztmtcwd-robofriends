@@ -21,3 +21,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+*::selection {
+  background: #00c9b7;
+  padding: 10px;
+}
