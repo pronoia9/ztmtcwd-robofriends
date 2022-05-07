@@ -16,15 +16,21 @@ class App extends Component {
   }
 
   onSearch = (e) => {
-    this.setState({...this.state, searchKey: e.target.value});
+    this.setState({ ...this.state, searchKey: e.target.value });
+
+    e.target.value === '' ? (document.getElementsByTagName('html')[0].style.height = '') : (document.getElementsByTagName('html')[0].style.height = '100%');
   };
 
   render() {
     return (
-      <div className='app-container'>
-        <div className='title-container tc'><h1 className='title'>Robofriends</h1></div>
-        <SearchBox onSearch={this.onSearch} />
-        <CardList robots={this.state.robots.filter((robot) => robot.name.toLowerCase().includes(this.state.searchKey.toLowerCase()))} searchKey={this.state.searchKey} />
+      <div className='test-container'>
+        <div className='app-container'>
+          <div className='title-container tc'>
+            <h1 className='title'>Robofriends</h1>
+          </div>
+          <SearchBox onSearch={this.onSearch} />
+          <CardList robots={this.state.robots.filter((robot) => robot.name.toLowerCase().includes(this.state.searchKey.toLowerCase()))} searchKey={this.state.searchKey} />
+        </div>
       </div>
     );
   }
