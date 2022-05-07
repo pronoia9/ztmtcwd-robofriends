@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className='app-container'>
         <SearchBox searchKey={this.state.searchKey} />
-        {this.state.robots.length > 0 ? <CardList robots={this.state.robots} searchKey={this.state.searchKey} /> : <></>}
+        <CardList robots={this.state.robots} searchKey={this.state.searchKey} />
       </div>
     );
   }
