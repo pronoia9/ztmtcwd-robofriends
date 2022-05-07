@@ -10,6 +10,16 @@
   border-radius: 5px;
 }
 
+.name {
+  font-size: 1.3em;
+  letter-spacing: 0.063em;
+  margin-bottom: 0;
+}
+
+.username {
+  margin-top: 0;
+}
+
 .email {
   color: #2fffad;
   text-decoration: none;
