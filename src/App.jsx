@@ -4,7 +4,7 @@ import CardList from './CardList';
 // data
 import robotsData from './robots.json';
 // styles
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
   constructor() {
