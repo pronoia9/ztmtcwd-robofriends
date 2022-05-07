@@ -1,3 +1,7 @@
+.searchbox-container {
+  padding-bottom: 50px;
+}
+
 .search-box,
 .search-box::placeholder {
   color: #dddddd;
