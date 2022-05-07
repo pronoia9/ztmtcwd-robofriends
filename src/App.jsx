@@ -3,6 +3,8 @@ import SearchBox from './SearchBox';
 import CardList from './CardList';
 // data
 import robotsData from './robots.json';
+// styles
+import './App.css';
 
 class App extends Component {
   constructor() {

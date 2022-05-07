@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url(./Pacifico-Regular.ttf);
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  text-transform: capitalize;
+}
