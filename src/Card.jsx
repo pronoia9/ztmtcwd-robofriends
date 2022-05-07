@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/Card.css';
 
 const Card = ({ id, name = 'Name', username = 'Username', email = 'example@mail.com' }) => {
   return (
