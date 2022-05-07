@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 const Cards = ({ robots }) => {
-  return <div className='cards-container'>{robots ? robots.map((robot) => robot ? <Card {...robot} key={robot.id} /> : <></>) : <></>}</div>;
+  return <div className='cards-container'>{robots.map((robot) => <Card {...robot} key={robot.id} />)}</div>;
 };
 
 export default Cards;
