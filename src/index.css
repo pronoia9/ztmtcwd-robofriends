@@ -1,3 +1,8 @@
+html,
+body {
+  margin: 0;
+}
+
 *::selection {
   background: #21d4fd;
 }
@@ -8,7 +13,6 @@ body {
   background: linear-gradient(to bottom, #b721ff, #2af598, #fec051, #fee140, #fa709a);
   background-size: 100%;
   background-repeat: no-repeat;
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
   font-weight: 400;
