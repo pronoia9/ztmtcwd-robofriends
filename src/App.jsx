@@ -14,7 +14,7 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     console.log('will mount');
 
     // fetch('https://jsonplaceholder.typicode.com/users')
@@ -48,9 +48,9 @@ class App extends Component {
   }
 
   // UPDATING FUNCTIONS
-  componentWillReceiveProps() { console.log('component Will Receive Props'); }
+  UNSAFE_componentWillReceiveProps() { console.log('component Will Receive Props'); }
   shouldComponentUpdate() { console.log('should Component Update'); }
-  componentWillUpdate() { console.log('component Will Update'); }
+  UNSAFE_componentWillUpdate() { console.log('component Will Update'); }
   componentDidUpdate() { console.log('component Did Update'); }
 
   // UNMOUNTING FUNCTIONS
