@@ -26,7 +26,7 @@ class App extends Component {
     const { robots, searchKey } = this.state;
     const { changeHtmlHeight, onSearch } = this;
     const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchKey.toLowerCase()));
-    !filteredRobots ? changeHtmlHeight('100%') : changeHtmlHeight('');
+    !filteredRobots.length ? changeHtmlHeight('100%') : changeHtmlHeight('');
 
     return (
       <div className='test-container'>
