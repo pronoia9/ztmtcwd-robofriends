@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
-// data
-import robotsData from './robots.json'; //https://jsonplaceholder.typicode.com/users
 // styles
 import './css/App.css';
 
@@ -11,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      robots: robotsData,
+      robots: [],
       searchKey: 'a',
     };
   }
