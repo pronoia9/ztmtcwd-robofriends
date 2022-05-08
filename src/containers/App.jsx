@@ -23,8 +23,10 @@ class App extends Component {
   }
 
   render() {
-    const filteredRobots = this.state.robots.filter((robot) => robot.name.toLowerCase().includes(this.state.searchKey.toLowerCase()));
-    filteredRobots.length === 0 ? this.changeHtmlHeight('100%') : this.changeHtmlHeight('');
+    const { robots, searchKey } = this.state;
+    const { changeHtmlHeight, onSearch } = this;
+    const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchKey.toLowerCase()));
+    filteredRobots.length === 0 ? changeHtmlHeight('100%') : changeHtmlHeight('');
 
     return (
       <div className='test-container'>
@@ -32,9 +34,9 @@ class App extends Component {
           <div className='title-container tc'>
             <h1 className='title'>Robofriends</h1>
           </div>
-          <SearchBox onSearch={this.onSearch} />
+          <SearchBox onSearch={onSearch} />
           <Scroll>
-            <CardList robots={filteredRobots} searchKey={this.state.searchKey} />
+            <CardList robots={filteredRobots} searchKey={searchKey} />
           </Scroll>
         </div>
       </div>
