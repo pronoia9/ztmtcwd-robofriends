@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
 // data
-import robotsData from './robots.json';  //https://jsonplaceholder.typicode.com/users
+import robotsData from './robots.json'; //https://jsonplaceholder.typicode.com/users
 // styles
 import './css/App.css';
 
@@ -55,7 +55,11 @@ class App extends Component {
   onSearch = (e) => {
     this.setState({ ...this.state, searchKey: e.target.value });
 
-    e.target.value === '' ? (document.getElementsByTagName('html')[0].style.height = '') : (document.getElementsByTagName('html')[0].style.height = '100%');
+    e.target.value === '' ? this.changeHtmlHeight('') : this.changeHtmlHeight('100%');
+  };
+
+  changeHtmlHeight = (height) => {
+    document.getElementsByTagName('html')[0].style.height = height;
   };
 }
 
