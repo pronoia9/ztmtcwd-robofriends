@@ -14,19 +14,6 @@ class App extends Component {
     };
   }
 
-  UNSAFE_componentWillMount() {
-    console.log('will mount');
-
-    // fetch('https://jsonplaceholder.typicode.com/users')
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     // robotsData.concat(data);
-    //     data.map((e) => this.state.robots.push(e));
-    //     console.log(`fetch: ${this.state.robots}`);
-    //   });
-    // console.log(`render: ${this.state.robots}`);
-  }
-
   render() {
     !this.state.robots || this.state.robots.length === 0 ? this.changeHtmlHeight('100%') : this.changeHtmlHeight('');
 
@@ -48,9 +35,7 @@ class App extends Component {
   }
 
   // UPDATING FUNCTIONS
-  UNSAFE_componentWillReceiveProps() { console.log('component Will Receive Props'); }
   shouldComponentUpdate() { console.log('should Component Update'); }
-  UNSAFE_componentWillUpdate() { console.log('component Will Update'); }
   componentDidUpdate() { console.log('component Did Update'); }
 
   // UNMOUNTING FUNCTIONS
