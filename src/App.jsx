@@ -46,7 +46,7 @@ class App extends Component {
 
   // OTHER FUNCTIONS
   onSearch = (e) => {
-    this.setState({ ...this.state, searchKey: e.target.value });
+    this.setState({ searchKey: e.target.value });
   };
 
   changeHtmlHeight = (height) => {
