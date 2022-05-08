@@ -14,9 +14,9 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {}
+  componentWillMount() {
+    console.log('will mount');
 
-  render() {
     // fetch('https://jsonplaceholder.typicode.com/users')
     //   .then((response) => response.json())
     //   .then((data) => {
@@ -25,6 +25,9 @@ class App extends Component {
     //     console.log(`fetch: ${this.state.robots}`);
     //   });
     // console.log(`render: ${this.state.robots}`);
+  }
+
+  render() {
     !this.state.robots || this.state.robots.length === 0 ? this.changeHtmlHeight('100%') : this.changeHtmlHeight('');
 
     return (
@@ -40,26 +43,26 @@ class App extends Component {
     );
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log('did mount');
+  }
 
   // UPDATING FUNCTIONS
-  componentWillReceiveProps() {}
-  shouldComponentUpdate() {}
-  componentWillUpdate() {}
-  componentDidUpdate() {}
+  componentWillReceiveProps() { console.log('component Will Receive Props'); }
+  shouldComponentUpdate() { console.log('should Component Update'); }
+  componentWillUpdate() { console.log('component Will Update'); }
+  componentDidUpdate() { console.log('component Did Update'); }
 
   // UNMOUNTING FUNCTIONS
+  componentWillUnmount() { console.log('component Will Unmount'); }
 
   // OTHER FUNCTIONS
   onSearch = (e) => {
     this.setState({ ...this.state, searchKey: e.target.value });
-
     e.target.value === '' ? this.changeHtmlHeight('') : this.changeHtmlHeight('100%');
   };
 
-  changeHtmlHeight = (height) => {
-    document.getElementsByTagName('html')[0].style.height = height;
-  };
+  changeHtmlHeight = (height) => { document.getElementsByTagName('html')[0].style.height = height; };
 }
 
 export default App;
