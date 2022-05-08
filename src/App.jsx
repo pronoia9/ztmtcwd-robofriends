@@ -14,6 +14,12 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((users) => this.setState({ robots: users }));
+  }
+
   render() {
     !this.state.robots || this.state.robots.length === 0 ? this.changeHtmlHeight('100%') : this.changeHtmlHeight('');
 
@@ -30,24 +36,21 @@ class App extends Component {
     );
   }
 
-  componentDidMount() {
-    console.log('did mount');
-  }
-
   // UPDATING FUNCTIONS
-  shouldComponentUpdate() { console.log('should Component Update'); }
-  componentDidUpdate() { console.log('component Did Update'); }
+  // shouldComponentUpdate() { console.log('should Component Update'); }
+  // componentDidUpdate() { console.log('component Did Update'); }
 
   // UNMOUNTING FUNCTIONS
-  componentWillUnmount() { console.log('component Will Unmount'); }
+  // componentWillUnmount() { console.log('component Will Unmount'); }
 
   // OTHER FUNCTIONS
   onSearch = (e) => {
     this.setState({ ...this.state, searchKey: e.target.value });
-    e.target.value === '' ? this.changeHtmlHeight('') : this.changeHtmlHeight('100%');
   };
 
-  changeHtmlHeight = (height) => { document.getElementsByTagName('html')[0].style.height = height; };
+  changeHtmlHeight = (height) => {
+    document.getElementsByTagName('html')[0].style.height = height;
+  };
 }
 
 export default App;
