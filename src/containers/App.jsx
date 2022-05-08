@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 // components
-import SearchBox from './SearchBox';
-import CardList from './CardList';
-import Scroll from './Scroll';
+import SearchBox from '../SearchBox';
+import CardList from '../CardList';
+import Scroll from '../Scroll';
 // styles
-import './css/App.css';
+import './App.css';
 
 class App extends Component {
   // MOUNTING FUNCTIONS
