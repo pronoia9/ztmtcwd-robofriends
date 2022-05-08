@@ -27,6 +27,7 @@ class App extends Component {
     //     console.log(`fetch: ${this.state.robots}`);
     //   });
     // console.log(`render: ${this.state.robots}`);
+    !this.state.robots || this.state.robots.length === 0 ? this.changeHtmlHeight('100%') : this.changeHtmlHeight('');
 
     return (
       <div className='test-container'>
