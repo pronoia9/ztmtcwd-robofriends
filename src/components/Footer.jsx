@@ -8,7 +8,7 @@ export default function Footer() {
           <img src='assets/images/logo/logo-vertical.png' alt='logo' />
         </a>
       </Div>
-      <p class='description mt--30'>
+      <p classNames='description mt--30'>
         © 2022. All rights reserved by{' '}
         <a target='_blank' href='https://themeforest.net/user/rainbow-themes/portfolio' rel='noreferrer'>
           Rainbow-Themes.
