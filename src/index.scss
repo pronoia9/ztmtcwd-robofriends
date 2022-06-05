@@ -17,3 +17,10 @@
 @import url('https://rainbowit.net/html/inbio/assets/css/plugins/feature.css');
 /* Style */
 @import url('https://rainbowit.net/html/inbio/assets/css/style.css');
+
+body {
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #6a67ce, #fc636b) !important;
+  position: relative;
+}
