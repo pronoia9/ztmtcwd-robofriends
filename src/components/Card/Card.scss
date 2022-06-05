@@ -1,0 +1,37 @@
+.rn-portfolio {
+  .inner {
+    .thumbnail {
+      border-radius: 20px;
+      background: inherit;
+      // background-image: linear-gradient(to right top, #ffeb68, #ffb25f, #ff7e71, #d75a88, #944b94, #38438b);
+      // background-size: 100%;
+      // background-repeat: no-repeat;
+
+      // FROSTED GLASS FOR PROFILE IMAGE BG
+      // a {
+      //   position: relative;
+
+      //   &:before {
+      //     background: inherit;
+      //     content: '';
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0;
+      //     right: 0;
+      //     bottom: 0;
+      //     box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.2);
+      //     filter: blur(10px);
+      //     z-index: -1;
+      //   }
+      // }
+    }
+  }
+
+  p {
+    a {
+      &.email {
+        font-size: 16px !important;
+      }
+    }
+  }
+}

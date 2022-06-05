@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 // components
-import ErrorBoundry from '../components/ErrorBoundry';
-import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
-import CardList from '../components/CardList';
-// styles
-import './App.css';
+import Div from '../utils/Div';
+import ErrorBoundry from '../utils/ErrorBoundry';
+import Header from './Header/Header';
+import SearchBox from './SearchBox/SearchBox';
+import Scroll from '../utils/Scroll';
+import CardList from './Card/CardList';
+import Footer from './Footer/Footer';
+// logo
+const logo = require('../assets/images/logo.png');
 
 export default function App() {
   const [state, setState] = useState({ robots: [], searchKey: '' });
@@ -27,18 +30,17 @@ export default function App() {
   !filteredRobots.length ? changeHtmlHeight('100%') : changeHtmlHeight('');
 
   return (
-    <div className='test-container'>
-      <div className='app-container'>
-        <div className='title-container tc'>
-          <h1 className='title'>Robofriends</h1>
-        </div>
+    <Div ids={['app-body']} classNames={['template-color-1 box-wrapper spybody', 'main-page-wrapper']}>
+      <Div ids={['portfolio']} classNames={['rn-portfolio-area rn-section-gap section-separator', 'container']}>
+        <Header />
         <SearchBox onInputChange={onInputChange} />
         <Scroll>
           <ErrorBoundry>
             <CardList robots={filteredRobots} searchKey={searchKey} />
           </ErrorBoundry>
         </Scroll>
-      </div>
-    </div>
+      </Div>
+      <Footer logo={logo} />
+    </Div>
   );
 }

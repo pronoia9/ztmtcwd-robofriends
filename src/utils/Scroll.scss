@@ -1,0 +1,12 @@
+.scroll-container {
+  margin: 0;
+  padding: 0 30px;
+  overflow-y: scroll;
+  height: 1030px; // TODO: improve this, this is for 2 lines of users, what if we get results for 1 line?
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}

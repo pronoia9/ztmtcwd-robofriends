@@ -1,8 +1,6 @@
 import React from 'react';
-import './Scroll.css';
+import './Scroll.scss';
 
-const Scroll = (props) => {
+export default function Scroll(props) {
   return <div className='scroll-container'>{props.children}</div>;
 };
-
-export default Scroll;
