@@ -1,11 +1,11 @@
 import Div from '../utils/Div';
 
-export default function Footer() {
+export default function Footer({ logo }) {
   return (
     <Div classNames={['rn-footer-area rn-section-gap section-separator', 'container', 'row', 'col-lg-12', 'footer-area text-center']}>
       <Div classNames={['logo']}>
         <a href='index.html'>
-          <img src='assets/images/logo/logo-vertical.png' alt='logo' />
+          <img src={logo} alt='logo' />
         </a>
       </Div>
       <p className='description mt--30'>
