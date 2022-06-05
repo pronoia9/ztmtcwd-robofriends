@@ -1,7 +1,6 @@
 import React from 'react';
-import './Card.css';
 
-const Card = ({ id, name = 'Name', username = 'Username', email = 'example@mail.com' }) => {
+export default function Card ({ id, name = 'Name', username = 'Username', email = 'example@mail.com' }) {
   return (
     <div className='gradient-spacey tc dib bd3 pa3 ma2 grow bw2'>
       <div className='card-container'>
@@ -17,5 +16,3 @@ const Card = ({ id, name = 'Name', username = 'Username', email = 'example@mail.
     </div>
   );
 };
-
-export default Card;
