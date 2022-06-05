@@ -24,3 +24,13 @@ body {
   background: linear-gradient(to right, #6a67ce, #fc636b) !important;
   position: relative;
 }
+
+.rn-portfolio {
+  p {
+    a {
+      &.email {
+        font-size: smaller;
+      }
+    }
+  }
+}
