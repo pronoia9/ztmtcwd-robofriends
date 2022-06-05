@@ -6,6 +6,8 @@ import Header from '../components/Header';
 import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import Footer from '../components/Footer';
+// logo
+const logo = require('../assets/images/logo.png');
 
 export default function App() {
   const [state, setState] = useState({ robots: [], searchKey: '' });
@@ -35,7 +37,7 @@ export default function App() {
           <CardList robots={filteredRobots} searchKey={searchKey} />
         </ErrorBoundry>
       </Div>
-      <Footer />
+      <Footer logo={logo} />
     </Div>
   );
 }
