@@ -5,7 +5,7 @@ import './Card.scss';
 
 export default function Card({ id, name = 'Name', username = 'Username', email = 'example@mail.com' }) {
   return (
-    <Div classNames={['col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30', 'rn-portfolio', 'inner']}>
+    <Div classNames={['col-lg-6 col-xl-4 col-md-6 col-12 mt--25 mb--25 mt_md--30 mt_sm--30', 'rn-portfolio', 'inner']}>
       <Div classNames={['thumbnail']}>
         <a href='javascript:void(0)'>
           <img src={`https://robohash.org/${id}?200x200`} alt={`${username}_photo`} />
