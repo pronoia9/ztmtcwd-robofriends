@@ -1,7 +1,8 @@
-#app-body {
-  &.template-color-1 {
-    background-color: #212428;
-  }
+body {
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #6a67ce, #fc636b) !important;
+  position: relative;
 }
 
 // #portfolio {
