@@ -6,8 +6,6 @@ import Header from '../components/Header';
 import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import Footer from '../components/Footer';
-// styles
-import './App.scss';
 
 export default function App() {
   const [state, setState] = useState({ robots: [], searchKey: '' });
