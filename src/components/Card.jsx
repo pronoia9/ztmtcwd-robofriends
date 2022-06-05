@@ -18,17 +18,17 @@ export default function Card({ id, name = 'Name', username = 'Username', email =
           <Div classNames={['meta']}>
             <span>
               <a href='javascript:void(0)'>
-                <i class='feather-heart'></i>
+                <i classNames='feather-heart'></i>
               </a>
               {id}
             </span>
           </Div>
         </Div>
-        <h4 class='title'>
-          <a href='javascript:void(0)'>
-            {name} <br /> {email} <i class='feather-arrow-up-right'></i>
-          </a>
-        </h4>
+        <p classNames='title'>
+          <a href='javascript:void(0)'>{name}</a>
+          <br /> 
+          <a className='email' href='javascript:void(0)'>{email} <i classNames='feather-arrow-up-right'></i></a>
+        </p>
       </Div>
     </Div>
   );
