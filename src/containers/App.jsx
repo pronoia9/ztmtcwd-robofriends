@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 // components
+import Div from '../utils/Div';
 import ErrorBoundry from '../components/ErrorBoundry';
+import Header from '../components/Header';
 import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
 import CardList from '../components/CardList';
+import Footer from '../components/Footer';
 // styles
-import './App.css';
+import './App.scss';
 
 export default function App() {
   const [state, setState] = useState({ robots: [], searchKey: '' });
@@ -27,18 +29,15 @@ export default function App() {
   !filteredRobots.length ? changeHtmlHeight('100%') : changeHtmlHeight('');
 
   return (
-    <div className='test-container'>
-      <div className='app-container'>
-        <div className='title-container tc'>
-          <h1 className='title'>Robofriends</h1>
-        </div>
+    <Div ids={['app-body']} classNames={['template-color-1 home-sticky spybody']}>
+      <Div ids={['portfolio']} classNames={['rn-portfolio-area rn-section-gap section-separator', 'container']}>
+        <Header />
         <SearchBox onInputChange={onInputChange} />
-        <Scroll>
-          <ErrorBoundry>
-            <CardList robots={filteredRobots} searchKey={searchKey} />
-          </ErrorBoundry>
-        </Scroll>
-      </div>
-    </div>
+        <ErrorBoundry>
+          <CardList robots={filteredRobots} searchKey={searchKey} />
+        </ErrorBoundry>
+      </Div>
+      <Footer />
+    </Div>
   );
 }
