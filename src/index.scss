@@ -30,7 +30,7 @@ body {
   p {
     a {
       &.email {
-        font-size: smaller;
+        font-size: 16px;
       }
     }
   }
@@ -39,7 +39,7 @@ body {
 // search bar
 .contact-form-wrapper {
   box-shadow: none;
-  padding: 30px 25% 0 25%;
+  padding: 50px 25% 0 25%;
 
   .introduce {
     display: block;
