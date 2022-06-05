@@ -4,6 +4,7 @@ import Div from '../utils/Div';
 import ErrorBoundry from '../utils/ErrorBoundry';
 import Header from './Header/Header';
 import SearchBox from './SearchBox/SearchBox';
+import Scroll from '../utils/Scroll';
 import CardList from './Card/CardList';
 import Footer from './Footer/Footer';
 // logo
@@ -33,9 +34,11 @@ export default function App() {
       <Div ids={['portfolio']} classNames={['rn-portfolio-area rn-section-gap section-separator', 'container']}>
         <Header />
         <SearchBox onInputChange={onInputChange} />
-        <ErrorBoundry>
-          <CardList robots={filteredRobots} searchKey={searchKey} />
-        </ErrorBoundry>
+        <Scroll>
+          <ErrorBoundry>
+            <CardList robots={filteredRobots} searchKey={searchKey} />
+          </ErrorBoundry>
+        </Scroll>
       </Div>
       <Footer logo={logo} />
     </Div>
