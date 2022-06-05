@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0 30px;
   overflow-y: scroll;
-  height: 1030px; /* TODO: cal new height if need to be used */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  height: 1030px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .scroll-container::-webkit-scrollbar {
