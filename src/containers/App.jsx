@@ -29,7 +29,7 @@ export default function App() {
   !filteredRobots.length ? changeHtmlHeight('100%') : changeHtmlHeight('');
 
   return (
-    <Div ids={['app-body']} classNames={['template-color-1 home-sticky spybody']}>
+    <Div ids={['app-body']} classNames={['template-color-1 box-wrapper spybody', 'main-page-wrapper']}>
       <Div ids={['portfolio']} classNames={['rn-portfolio-area rn-section-gap section-separator', 'container']}>
         <Header />
         <SearchBox onInputChange={onInputChange} />
