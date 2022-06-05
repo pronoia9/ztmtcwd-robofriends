@@ -25,9 +25,11 @@ export default function Card({ id, name = 'Name', username = 'Username', email =
           </Div>
         </Div>
         <p className='title'>
-          <a href='javascript:void(0)'>{name}</a>
-          <br /> 
-          <a className='email' href='javascript:void(0)'>{email}</a>
+          {name}
+          <br />
+          <a className='email' href='javascript:void(0)'>
+            {email}
+          </a>
         </p>
       </Div>
     </Div>
