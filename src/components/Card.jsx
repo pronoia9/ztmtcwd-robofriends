@@ -24,7 +24,7 @@ export default function Card({ id, name = 'Name', username = 'Username', email =
             </span>
           </Div>
         </Div>
-        <p classNames='title'>
+        <p className='title'>
           <a href='javascript:void(0)'>{name}</a>
           <br /> 
           <a className='email' href='javascript:void(0)'>{email}</a>
