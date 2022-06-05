@@ -1,4 +1,5 @@
 import Div from '../../utils/Div';
+import './SearchBox.scss';
 
 export default function SearchBox({ onInputChange }) {
   return (
