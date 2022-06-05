@@ -9,7 +9,7 @@ export default function Footer({ logo }) {
         </a>
       </Div>
       <p className='description mt--30'>
-        © 2022. All rights reserved by{' '}
+        © {new Date().getFullYear()}. All rights reserved by{' '}
         <a target='_blank' href='https://themeforest.net/user/rainbow-themes/portfolio' rel='noreferrer'>
           Rainbow-Themes.
         </a>
