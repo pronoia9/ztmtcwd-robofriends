@@ -2,7 +2,7 @@ import Div from '../utils/Div';
 
 export default function SearchBox({ onInputChange }) {
   return (
-    <Div classNames={['searchbox-container pa2 tc']}>
+    <Div classNames={['contact-form-wrapper', 'introduce', 'rnt-contact-form rwt-dynamic-form row', 'col-lg-12', 'form-group']}>
       <input className='search-box' type='search' placeholder='search robots' onChange={onInputChange} />
     </Div>
   );
