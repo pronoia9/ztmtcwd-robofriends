@@ -10,7 +10,7 @@ export default function Footer({ logo }) {
       </Div>
       <p className='description mt--30'>
         © {new Date().getFullYear()}. All rights reserved by{' '}
-        <a target='_blank' href='https://rainbowit.net/html/inbio/' rel='noreferrer'>
+        <a target='_blank' href='https://rainbowit.net/splash/html/inbio/#demo' rel='noreferrer'>
           Rainbow-Themes.
         </a>
       </p>
