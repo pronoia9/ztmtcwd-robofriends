@@ -1,6 +1,7 @@
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Div from '../utils/Div';
+import Div from '../../utils/Div';
+import './Card.scss';
 
 export default function Card({ id, name = 'Name', username = 'Username', email = 'example@mail.com' }) {
   return (

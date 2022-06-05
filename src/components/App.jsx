@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 // components
 import Div from '../utils/Div';
-import ErrorBoundry from '../components/ErrorBoundry';
-import Header from '../components/Header';
-import SearchBox from '../components/SearchBox';
-import CardList from '../components/CardList';
-import Footer from '../components/Footer';
+import ErrorBoundry from '../utils/ErrorBoundry';
+import Header from './Header/Header';
+import SearchBox from './SearchBox/SearchBox';
+import CardList from './Card/CardList';
+import Footer from './Footer/Footer';
 // logo
 const logo = require('../assets/images/logo.png');
 

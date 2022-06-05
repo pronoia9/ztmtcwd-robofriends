@@ -1,4 +1,4 @@
-import Div from '../utils/Div';
+import Div from '../../utils/Div';
 import Card from './Card';
 
 export default function Cards({ robots, searchKey }) {
