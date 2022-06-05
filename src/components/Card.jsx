@@ -18,7 +18,7 @@ export default function Card({ id, name = 'Name', username = 'Username', email =
           <Div classNames={['meta']}>
             <span>
               <a href='javascript:void(0)'>
-                <i classNames='feather-heart'></i>
+                <i className='fa-solid fa-id-card-clip'></i>{' '}
               </a>
               {id}
             </span>
@@ -27,7 +27,7 @@ export default function Card({ id, name = 'Name', username = 'Username', email =
         <p classNames='title'>
           <a href='javascript:void(0)'>{name}</a>
           <br /> 
-          <a className='email' href='javascript:void(0)'>{email} <i classNames='feather-arrow-up-right'></i></a>
+          <a className='email' href='javascript:void(0)'>{email}</a>
         </p>
       </Div>
     </Div>
