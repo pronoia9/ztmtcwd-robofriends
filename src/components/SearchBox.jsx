@@ -1,9 +1,9 @@
-import React from 'react';
+import Div from '../utils/Div';
 
 export default function SearchBox({ onInputChange }) {
   return (
-    <div className='searchbox-container pa2 tc'>
+    <Div classNames={['searchbox-container pa2 tc']}>
       <input className='search-box' type='search' placeholder='search robots' onChange={onInputChange} />
-    </div>
+    </Div>
   );
-};
+}
