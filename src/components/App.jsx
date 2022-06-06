@@ -10,7 +10,7 @@ import CardList from './Card/CardList';
 import Footer from './Footer/Footer';
 // redux
 import { setSearchField } from '../redux/actions';
-const mapStateToProps = (state) => ({ searchField: state.searchField });
+const mapStateToProps = (state) => ({ searchField: state.searchRobots.searchField });
 const mapDispatchToProps = (dispatch) => ({ onInputChange: (event) => dispatch(setSearchField(event.target.value)) });
 // logo
 const logo = require('../assets/images/logo.png');
