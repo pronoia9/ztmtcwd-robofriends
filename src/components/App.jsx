@@ -9,7 +9,7 @@ import Scroll from '../utils/Scroll';
 import CardList from './Card/CardList';
 import Footer from './Footer/Footer';
 // redux
-import { setSearchField } from '../actions';
+import { setSearchField } from '../redux/actions';
 const mapStateToProps = (state) => ({ searchField: state.searchField });
 const mapDispatchToProps = (dispatch) => ({ onInputChange: (event) => dispatch(setSearchField(event.target.value)) });
 // logo

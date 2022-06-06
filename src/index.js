@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import './index.scss';
 // components
 import App from './components/App';
-import { searchRobots } from './reducers';
+import { searchRobots } from './redux/reducers';
 
 const store = createStore(searchRobots);
 
