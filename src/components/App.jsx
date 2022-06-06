@@ -35,11 +35,16 @@ const App = (props) => {
       <Div ids={['portfolio']} classNames={['rn-portfolio-area rn-section-gap section-separator', 'container']}>
         <Header />
         <SearchBox onInputChange={onInputChange} />
-        <Scroll>
-          <ErrorBoundry>
-            <CardList robots={filteredRobots} />
-          </ErrorBoundry>
-        </Scroll>
+        {!isPending ? (
+          <Scroll>
+            <ErrorBoundry>
+              <CardList robots={filteredRobots} />
+            </ErrorBoundry>
+          </Scroll>
+        ) : (
+          // TODO: loading screen
+          <></>
+        )}
       </Div>
       <Footer logo={logo} />
     </Div>
