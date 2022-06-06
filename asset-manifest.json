@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ztmtcwd-robofriends/static/css/main.bb6fc68f.css",
+    "main.js": "/ztmtcwd-robofriends/static/js/main.0b4039cb.js",
+    "static/media/logo.png": "/ztmtcwd-robofriends/static/media/logo.9c7335013ecf5d67a1b4.png",
+    "index.html": "/ztmtcwd-robofriends/index.html",
+    "main.bb6fc68f.css.map": "/ztmtcwd-robofriends/static/css/main.bb6fc68f.css.map",
+    "main.0b4039cb.js.map": "/ztmtcwd-robofriends/static/js/main.0b4039cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb6fc68f.css",
+    "static/js/main.0b4039cb.js"
+  ]
+}
