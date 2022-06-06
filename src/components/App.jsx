@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 // components
 import Div from '../utils/Div';
 import ErrorBoundry from '../utils/ErrorBoundry';
@@ -7,25 +8,26 @@ import SearchBox from './SearchBox/SearchBox';
 import Scroll from '../utils/Scroll';
 import CardList from './Card/CardList';
 import Footer from './Footer/Footer';
+// redux
+import { setSearchField } from '../actions';
+const mapStateToProps = (state) => ({ searchField: state.searchField });
+const mapDispatchToProps = (dispatch) => ({ onInputChange: (event) => dispatch(setSearchField(event.target.value)) });
 // logo
 const logo = require('../assets/images/logo.png');
 
-export default function App() {
-  const [state, setState] = useState({ robots: [], searchKey: '' });
-  const { robots, searchKey } = state;
+const App = (props) => {
+  const [state, setState] = useState({ robots: [] });
+  const { robots } = state;
+  const { searchField, onInputChange } = props;
 
   // get robotos list and set state
-  useEffect(
-    () => async () => {
+  useEffect(() => async () => {
       const response = await fetch('https://jsonplaceholder.typicode.com/users');
       const data = await response.json();
       setState((state) => ({ ...state, robots: data }));
-    },
-    []
-  );
-  const onInputChange = (e) => setState((state) => ({ ...state, searchKey: e.target.value }));
+    }, []);
   const changeHtmlHeight = (height) => (document.getElementsByTagName('html')[0].style.height = height);
-  const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchKey.toLowerCase()));
+  const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchField.toLowerCase()));
 
   !filteredRobots.length ? changeHtmlHeight('100%') : changeHtmlHeight('');
 
@@ -36,11 +38,13 @@ export default function App() {
         <SearchBox onInputChange={onInputChange} />
         <Scroll>
           <ErrorBoundry>
-            <CardList robots={filteredRobots} searchKey={searchKey} />
+            <CardList robots={filteredRobots} />
           </ErrorBoundry>
         </Scroll>
       </Div>
       <Footer logo={logo} />
     </Div>
   );
-}
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
