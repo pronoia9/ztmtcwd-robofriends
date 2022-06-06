@@ -28,6 +28,7 @@ const App = (props) => {
   const { robots, isPending, error, onRequestRobots, searchField, onInputChange } = props;
 
   // get robotos list
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => onRequestRobots(), []);
   const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchField.toLowerCase()));
 
