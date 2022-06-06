@@ -24,19 +24,10 @@ const mapDispatchToProps = (dispatch) => ({
 const logo = require('../assets/images/logo.png');
 
 const App = (props) => {
-  const [state, setState] = useState({ robots: [] });
-  const { robots } = state;
-  const { searchField, onInputChange } = props;
+  const { robots, isPending, error, onRequestRobots, searchField, onInputChange } = props;
 
-  // get robotos list and set state
-  useEffect(
-    () => async () => {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users');
-      const data = await response.json();
-      setState((state) => ({ ...state, robots: data }));
-    },
-    []
-  );
+  // get robotos list
+  useEffect(() => onRequestRobots(), []);
   const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchField.toLowerCase()));
 
   return (
