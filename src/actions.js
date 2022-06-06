@@ -1,1 +1,1 @@
-export const setSearchField = (input) => ({ type: 'CHANGE_SEARCH_FIELD', payload: text });
+export const setSearchField = (input) => ({ type: 'CHANGE_SEARCH_FIELD', payload: input });
