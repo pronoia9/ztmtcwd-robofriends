@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 // components
 import Div from '../utils/Div';
