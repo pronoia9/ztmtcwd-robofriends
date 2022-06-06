@@ -26,10 +26,7 @@ const App = (props) => {
       const data = await response.json();
       setState((state) => ({ ...state, robots: data }));
     }, []);
-  const changeHtmlHeight = (height) => (document.getElementsByTagName('html')[0].style.height = height);
   const filteredRobots = robots.filter((robot) => robot.name.toLowerCase().includes(searchField.toLowerCase()));
-
-  !filteredRobots.length ? changeHtmlHeight('100%') : changeHtmlHeight('');
 
   return (
     <Div ids={['app-body']} classNames={['template-color-1 box-wrapper spybody', 'main-page-wrapper']}>
