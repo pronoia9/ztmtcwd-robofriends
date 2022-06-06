@@ -17,7 +17,7 @@ const mapStateToProps = (state) => ({
   searchField: state.searchRobots.searchField,
 });
 const mapDispatchToProps = (dispatch) => ({
-  onRequestRobots: () => requestRobots(dispatch),
+  onRequestRobots: () => dispatch(requestRobots()),
   onInputChange: (event) => dispatch(setSearchField(event.target.value)),
 });
 // logo
