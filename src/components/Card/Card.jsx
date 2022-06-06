@@ -7,18 +7,18 @@ export default function Card({ id, name = 'Name', username = 'Username', email =
   return (
     <Div classNames={['col-lg-6 col-xl-4 col-md-6 col-12 mt--25 mb--25 mt_md--30 mt_sm--30', 'rn-portfolio', 'inner']}>
       <Div classNames={['thumbnail']}>
-        <a href='javascript:void(0)'>
+        <a href=''>
           <img src={`https://robohash.org/${id}?200x200`} alt={`${username}_photo`} />
         </a>
       </Div>
       <Div classNames={['content']}>
         <Div classNames={['category-info']}>
           <Div classNames={['category-list']}>
-            <a href='javascript:void(0)'>{`@${username}`}</a>
+            <a href=''>{`@${username}`}</a>
           </Div>
           <Div classNames={['meta']}>
             <span>
-              <a href='javascript:void(0)'>
+              <a href=''>
                 <i className='fa-solid fa-id-card-clip'></i>{' '}
               </a>
               {id}
@@ -28,7 +28,7 @@ export default function Card({ id, name = 'Name', username = 'Username', email =
         <p className='title'>
           {name}
           <br />
-          <a className='email' href='javascript:void(0)'>
+          <a className='email' href=''>
             {email}
           </a>
         </p>
